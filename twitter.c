@@ -76,7 +76,7 @@ int checkUsername(char *username){
 			ctr = 1;
 		}
 	}
-	//printf("ctr >> %d\n", ctr);
+
 	//username exists
 	if (ctr == 1){
 		val = 0;
@@ -97,27 +97,21 @@ int checkUsername(char *username){
 }
 
 void deleteUsername(char *username){
-	int i = 0, counter = 1;
-	char ch = 'a', *buff = (char *) malloc(100 * sizeof(char)), *str = (char *) malloc(100 *sizeof(char));
-    int del_line_no = 0, line_no = 0;
-//remove ".txt" from variable "username"
-	while (username[i] != '.'){
-		i++;
-	}
-	while(username[i] != '\0'){
-		username[i] = '\0';
-		i++;
-	}
+		int i = 0, counter = 1;
+		char ch = 'a', *buff = (char *) malloc(100 * sizeof(char)), *str = (char *) malloc(100 *sizeof(char));
+		int del_line_no = 0, line_no = 0;
+
+		//remove ".txt" from variable "username"
+		while (username[i] != '.'){
+			i++;
+		}
+		while(username[i] != '\0'){
+			username[i] = '\0';
+			i++;
+		}
 
     //open text file that contains the list of logged-in users
     fusers = fopen("users.txt", "r+");
-
-    //print the content
-    // printf("\nContent of file before modification : \n");
-    // print_file(fusers);
-
-    // rewind(fusers);
-    // printf("\n%d\n", del_line_no);
 
     //delete the line from the content
     while (!feof(fusers)){
@@ -130,8 +124,6 @@ void deleteUsername(char *username){
         counter++;
     }
 
-    // printf("\n%d\n", del_line_no);
-    // printf("%s\n", username);
     // rewind(fusers);
     fusers2 = fopen("replica.txt", "w+");
     while( fgets(str, 99, fusers) != NULL )
@@ -148,22 +140,16 @@ void deleteUsername(char *username){
     remove("users.txt");
     rename("replica.txt", "users.txt");
 
-    //print the content after changing it
-/*    fusers = fopen("users.txt", "r");
-    printf("\nContent of file after modification : \n");
-    print_file(fusers);
-    fclose(fusers);*/
-
-	if(buff != NULL)
-	{
-		free(buff);
-		buff = NULL;
-	}
-	if(str != NULL)
-	{
-		free(str);
-		str = NULL;
-	}
+		if(buff != NULL)
+		{
+			free(buff);
+			buff = NULL;
+		}
+		if(str != NULL)
+		{
+			free(str);
+			str = NULL;
+		}
 }
 
 int parseTweet(char *tweet){
@@ -196,7 +182,7 @@ int parseTweet(char *tweet){
 					stringNumCopy(tweetEntered.hashtags[str_index_hashtag], &tweet[i],  string_len);
 					tweetEntered.hashtags[str_index_hashtag][string_len] = '\0';
 
-					// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
+// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
 					break;
 				}
 			}
