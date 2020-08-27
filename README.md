@@ -53,9 +53,6 @@ $ Hello World! #publicTweet
 > logout
 - this deletes all data associated with user except for their posted tweets.
 
-
-### Running the Program
-
 ---
 ## License
 
