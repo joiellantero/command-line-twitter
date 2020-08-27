@@ -183,7 +183,6 @@ int parseTweet(char *tweet){
 					stringNumCopy(tweetEntered.hashtags[str_index_hashtag], &tweet[i],  string_len);
 					tweetEntered.hashtags[str_index_hashtag][string_len] = '\0';
 
-					// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
 					break;
 				}
 			}
@@ -199,8 +198,6 @@ int parseTweet(char *tweet){
 
 				stringNumCopy(tweetEntered.hashtags[str_index_hashtag], &tweet[i],  string_len);
 				tweetEntered.hashtags[str_index_hashtag][string_len] = '\0';
-
-				// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
 			}
 
 			str_index_hashtag++; // Make sure index count is correct
@@ -236,7 +233,6 @@ int parseTweet(char *tweet){
 						val = 0;
 					}
 
-					// printf("tagged_people (%d): %s \n", str_index_tag, tweetEntered.tagged_people[str_index_tag]);
 					break;
 				}
 			}
@@ -257,8 +253,6 @@ int parseTweet(char *tweet){
 				if (checkUsername(&tweetEntered.tagged_people[str_index_tag][1]) != 0){
 					val = 0;
 				}
-
-				// printf("tagged_people (%d): %s \n", str_index_tag, tweetEntered.tagged_people[str_index_tag]);
 			}
 
 			str_index_tag++; // Make sure index count is correct
@@ -297,7 +291,6 @@ int parseTweet(char *tweet){
 					stringNumCopy(tweetEntered.content[str_index_content], &tweet[i],  string_len);
 					tweetEntered.content[str_index_content][string_len] = '\0';
 
-					//printf("content (%d): %s \n", str_index_content, tweetEntered.content[str_index_content]);
 					break;
 				}
 			}
@@ -314,8 +307,6 @@ int parseTweet(char *tweet){
 
 				stringNumCopy(tweetEntered.content[str_index_content], &tweet[i],  string_len);
 				tweetEntered.content[str_index_content][string_len] = '\0';
-
-				//printf("content (%d): %s \n", str_index_content, tweetEntered.content[str_index_content]);
 			}
 
 			str_index_content++; // Make sure index count is correct
@@ -334,7 +325,6 @@ void saveTweet(char *username){
 	char *ext = ".txt\0";
 	char *usernameTextFile = NULL;
 
-	// printf("number of tagged people >> %d\n", str_index_tag);
 	//if there are no people tagged, do this
 	if (str_index_tag == 0){
 		tweetFile = (FILE **) malloc(sizeof(FILE*));
@@ -482,7 +472,7 @@ void viewWall(){
         found = strtok(string,",");
 
         if( found==NULL){
-            puts("[ERROR] No separators found.\n");
+            puts("[ERROR] File empty or no separators found.\n");
             return;
         }
 
@@ -599,7 +589,7 @@ void menu (char *username){
 			}
 			else
 			{
-				puts("[ERROR] Tweet failed to send.\nEither wrong syntax or user tagged doesn't exist.");
+				puts("[ERROR] Tweet failed to send. Either wrong syntax or user tagged doesn't exist.");
 			}
 
 			if (ch != NULL){
@@ -625,7 +615,7 @@ void menu (char *username){
 			break;
 		}
 		else {
-			puts("Error: option unknown.");
+			puts("[ERROR] Option unknown.\n");
 		}
 	}
 }
