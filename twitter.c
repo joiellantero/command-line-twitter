@@ -140,6 +140,7 @@ void deleteUsername(char *username){
     remove("users.txt");
     rename("replica.txt", "users.txt");
 
+
 		if(buff != NULL)
 		{
 			free(buff);
@@ -182,7 +183,7 @@ int parseTweet(char *tweet){
 					stringNumCopy(tweetEntered.hashtags[str_index_hashtag], &tweet[i],  string_len);
 					tweetEntered.hashtags[str_index_hashtag][string_len] = '\0';
 
-// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
+					// printf("hashtags (%d): %s \n", str_index_hashtag, tweetEntered.hashtags[str_index_hashtag]);
 					break;
 				}
 			}
