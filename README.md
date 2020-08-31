@@ -13,7 +13,7 @@ This project mimics the basic functionality of Twitter, i.e., posting a tweet, s
 
 ### Setup
 
-- If you haven't, install the gcc compiler using `https://gcc.gnu.org/install/`
+- If you haven't installed the gcc compiler on your computer, go to `https://gcc.gnu.org/install/` to install it.
 
 > compile the C program
 ```shell
