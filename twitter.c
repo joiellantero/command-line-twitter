@@ -1,3 +1,14 @@
+/*
+
+	* Command Line Twitter
+	* Version: 1.0.0
+  * Author: Joie Angelo Llantero
+	* Author URL: https://joiellantero.codes
+	* Github: https://github.com/joiellantero/command-line-twitter
+  * Command Line Twitter Copyright (c) 2020 Joie Llantero
+
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

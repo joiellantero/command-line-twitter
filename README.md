@@ -1,4 +1,4 @@
-# Offline Twitter
+# Command Line Twitter
 
 This project mimics the basic functionality of Twitter, i.e., posting a tweet, sending private messages, viewing your private messages, and viewing your wall. The application allows users to log in and out; however, once you log out, all the data associated to your account will be deleted except the posted tweets.
 
@@ -9,7 +9,7 @@ This project mimics the basic functionality of Twitter, i.e., posting a tweet, s
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/joiellantero/offline-twitter.git`
+- Clone this repo to your local machine using `https://github.com/joiellantero/command-line-twitter`
 
 ### Setup
 
