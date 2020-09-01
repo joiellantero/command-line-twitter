@@ -1,5 +1,7 @@
 # Command Line Twitter
 
+DISCLAIMER: The usage of this software requires some basic knowledge in C programming.
+
 This project mimics the basic functionality of Twitter, i.e., posting a tweet, sending private messages, viewing your private messages, and viewing your wall. The application allows users to log in and out; however, once you log out, all the data associated to your account will be deleted except the posted tweets.
 
 ---
@@ -13,7 +15,7 @@ This project mimics the basic functionality of Twitter, i.e., posting a tweet, s
 
 ### Setup
 
-- If you haven't, install the gcc compiler using `https://gcc.gnu.org/install/`
+- If you haven't installed the gcc compiler on your computer, go to `https://gcc.gnu.org/install/` to install it.
 
 > compile the C program
 ```shell
