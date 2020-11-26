@@ -1,6 +1,6 @@
 # Command Line Twitter
 
-DISCLAIMER: The usage of this software requires some basic knowledge in C programming. This program is not in any way connected to Twitter Company. 
+DISCLAIMER: The usage of this software requires some basic knowledge in C programming. This program is not in any way associated to Twitter Company. 
 
 This project mimics the basic functionalities of Twitter, i.e., posting a tweet, sending private messages, viewing your private messages, and viewing your wall. The application allows users to log in and out; however, once you log out, all the data associated to your account will be deleted except the posted tweets.
 
