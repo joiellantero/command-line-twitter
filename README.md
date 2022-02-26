@@ -6,7 +6,7 @@ This project mimics the basic functionalities of Twitter, i.e., posting a tweet,
 
 > DISCLAIMER: This program is not in any way associated to Twitter Company. 
 
----
+
 ## Installation
 
 - All the `code` required to get started
@@ -57,7 +57,7 @@ $ Hello World! #publicTweet
 > logout
 - this deletes all data associated with user except for their posted tweets.
 
----
+
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
